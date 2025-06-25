@@ -22,8 +22,9 @@ be treated as "./src/foo.ts".
 Node.js runtime so that compilation can be skipped.
 
 
-**package.json** – The "@types/node" package should be added as a dev
-dependency so type information is available for Node.js stdlib features like
+**package.json** – The project must declare `"type": "module"` to enable ESM 
+module loading. The "@types/node" package should be added as a dev dependency
+so type information is available for Node.js stdlib features like
 `process.exitCode` or `node:fs` etc.
 
 **.yarnrc.yml** – Yarn Node Linker is set to "node_modules" to ensure the LSP
