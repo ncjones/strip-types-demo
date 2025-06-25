@@ -49,7 +49,7 @@ and interfaces so that they can be stripped. Without this there will be runtime
 errors trying to import the stripped types.
 
 **No CJS Shims** – Modules _must_ use ESM syntax and _cannot_ use CJS module
-variables like `require`, `module.exports` or `__dirname__`. Your test runner
+variables like `require`, `module.exports` or `__dirname`. Your test runner
 (eg vitest) will likely provide these shims so even though these won't work in
 your production code they may work in your test code.
 
