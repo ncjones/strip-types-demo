@@ -79,7 +79,6 @@ using type stripping.
 | -------------------------------------- | ----------------------------------------------------------------------------------------------------- |
 | `"module": "esnext"`                   | Ensures native ESM syntax is preserved — critical for Node ESM and loaders.                           |
 | `"moduleResolution": "node"`           | Aligns TypeScript's resolution with Node's module resolution logic.                                   |
-| `"allowSyntheticDefaultImports": true` | Allows importing CommonJS modules as if they had default exports — often needed when mixing CJS deps. |
 | `"types": ["node"]`                    | Pulls in `@types/node`, ensuring Node globals like `process` are typed.                               |
 | `"noEmit": true`                       | Prevents `.js` output from TypeScript — essential if you rely purely on a runtime loader or bundler.  |
 | `"paths"`                              | Enables custom import aliases (e.g., `@/utils`) — make sure runtime resolver mirrors this.            |
