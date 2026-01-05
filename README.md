@@ -66,8 +66,8 @@ strictly not feasible with type stripping.
 | **Import syntax**  | `const foo = require('foo')`                  | `import foo from 'foo'`<br>`import { foo } from 'foo'`                                              |
 | **Dynamic import** | `require('foo')` (sync)                       | `await import('foo')` (async)                                                                       |
 | **JSON import**    | `require('./data.json')`                      | `import data from './data.json' assert { type: 'json' }` *(requires `--experimental-json-modules`)* |
-| **\_\_filename**   | `__filename`                                  | `fileURLToPath(import.meta.url)` *(from `node:url`)*                                                |
-| **\_\_dirname**    | `__dirname`                                   | `dirname(fileURLToPath(import.meta.url))` *(from `node:path` + `node:url`)*                         |
+| **\_\_filename**   | `__filename`                                  | `import.meta.filename`                                                                              |
+| **\_\_dirname**    | `__dirname`                                   | `import.meta.dirname`                                                                               |
 
 
 ## TSConfig Settings
